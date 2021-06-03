@@ -1,0 +1,13 @@
+<h1>Persona Template</h1>
+<ul>
+    {% for empleado in listaEmpleado%}
+    <li>{{empleado.first_name}} {{empleado.last_name}} {{empleado.job}} {{empleado.departamento.name}} </li>
+    <ul>
+        <li>X1</li>
+        <li>X2</li>
+        <li>X3</li>
+    </ul>
+    {% endfor %}
+</ul>
+
+

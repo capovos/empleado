@@ -1,0 +1,26 @@
+
+.page-item.active .page-link {
+    background: #212529;
+    border-color: #212529;
+}
+
+.page-item .page-link {
+    color: #212529;
+}
+
+a{
+    color: #212529;
+    text-decoration: none;
+
+}
+
+
+.ejemplo1{
+    background: red;
+    padding: 20px;
+    
+}
+.ejemplo2{
+    background: green;
+    padding: 20px;
+}

@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Foundation css -->
+    <link rel="stylesheet" href="{% static 'foundation/css/foundation.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/app.css' %}">
+    <title>{% block titulo %} {% endblock titulo %}</title>
+</head>
+<body>
+    <!-- Include Header -->
+    {% include 'home/common/header.html' %}
+
+    {% block content %} {% endblock content %}
+
+    <!-- Include Footer -->
+    {% include 'home/common/footer.html' %}
+
+    <!-- Foundation js -->
+    <script src="{% static 'foundation/js/foundation.min.js' %}"></script>
+    <script src="{% static 'js/app.js' %}"></script>
+</body>
+</html>

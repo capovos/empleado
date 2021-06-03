@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Administrar - Editar{% endblock title %}
+
+{% block content %}
+<main>
+{% include 'includes/header.html' %}
+<div class="container">
+    <div class="row">
+        <h1 class="mt-3">Modificar Empleados</h1>
+        <!-- <form method="POST" class="mt-4 mb-4">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="btn btn-dark">Modificar</button>
+        </form> -->
+
+        <div class="col md 4 card">
+            <div class="card-body">
+                <!-- form -->
+                <form method="POST" class="row g-3 mt-4 mb-4" enctype="multipart/form-data">
+                    {% csrf_token %}
+                   <div class="col-md-6">
+                        <label class="form-label">Nombre</label>
+                        {{form.first_name}}
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">Apellido</label>
+                        {{form.last_name}}
+                    </div>
+                    <div class="col-md-5">
+                        <label class="form-label">Trabajo</label>
+                        {{form.job}}   
+                    </div>
+                    <div class="col-md-5">
+                        <label class="form-label">Departamento</label>
+                        {{form.departamento}}   
+                    </div>
+                    <div class="col-md-5">
+                        <label class="form-label">Habilidades</label>
+                        {{form.habilidades}}   
+                    </div>
+                    <div class="col-md-10">
+                        <label class="form-label">Hoja de vida</label>
+                        <div>{{form.hoja_vida}}</div>
+                    </div>
+                    <div class="col-12">
+                        <button type="submit" class="btn btn-dark">Modificar</button>
+                    </div>
+                </form>
+                <!-- fin form -->
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+{% include 'includes/footer.html' %}
+</main>
+{% endblock content %}
+    

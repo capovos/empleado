@@ -1,0 +1,35 @@
+<header>
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="{% url 'persona_app:inicio' %}">Empleado</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="{% url 'persona_app:empleados_all' %}">Lista</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'departamento_app:departamento_list' %}">Departamento</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'persona_app:empleados_list_admin' %}">Administrar</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'departamento_app:new_departamento' %}">Nuevo Departamento</a>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Buscar empleado" aria-label="Search">
+          <a class="btn btn-success"  href="{% url 'persona_app:empleado_add' %}">Registrar</a>
+        </form>
+      </div>
+    </div>
+  </nav>
+</header>
+
+
+
+
+

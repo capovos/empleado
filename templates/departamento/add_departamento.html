@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Nuevo Departamento{% endblock title %}
+
+{% block content %}
+<main>
+{% include 'includes/header.html' %}
+<div class="container">
+    <div class="row">
+        <h1 class="mt-3">Nuevo Departamento</h1>
+
+        <div class="col md 4 card">
+            <div class="card-body">
+                <!-- form -->
+                <form method="POST" class="row g-3 mt-4 mb-4" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <h3>Datos Empleado</h3>
+                    <div class="col-md-7">
+                        <label class="form-label">Nombre</label>
+                        {{form.nombre}}
+                    </div>
+                    <div class="col-md-7">
+                        <label class="form-label">Apellido</label>
+                        {{form.apellido}}
+                    </div>
+                    <h3>Datos Departemento</h3>
+                    <div class="col-md-7">
+                        <label class="form-label">Trabajo</label>
+                        {{form.departamento}}  
+                    </div>
+                    <div class="col-md-7">
+                        <label class="form-label">Departamento</label>
+                        {{form.shortname}}   
+                    </div>
+                    <div class="col-12">
+                        <button type="submit" class="btn btn-success">Guardar</button>
+                    </div>
+                </form>
+                <!-- fin form -->
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+{% include 'includes/footer.html' %}
+</main>
+{% endblock content %}
+    

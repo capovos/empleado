@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}Empleado Detalle{% endblock title %}
+
+{% block content %}
+<main>
+{% include "includes/header.html" %}
+<div class="container">
+    <div class="row mt-5 mb-5">
+        <h1>Detalle Empleado</h1>
+        <div class="container">
+            <div class="row mt-5 mb-5 text-center">
+                <div class="col"></div>
+                <div class="col">
+                    <div class="mt-0">
+                        <p class="card-text">
+                            <h2>{{ empleado.get_job_display }}</h2>
+                        </p>
+                    </div>
+                    {% if empleado.avatar %}
+                    <img src="{{empleado.avatar.url}}" alt="" class=" rounded-circle" width="240" height="240">
+                    {% else %}
+                    <img src="{% static 'img/messi2.jpg' %}" alt="" class=" rounded-circle" width="240" height="240">
+                    {% endif %}
+                    <div class="mt-4">
+                        <h3>{{ empleado.full_name}}</h3>
+                        <h5>{{ empleado.departamento.short_name }}</h5></li>
+                        <p class="card-text">{{ Titulo }}</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        {% for h in empleado.habilidades.all %}
+                            <li class="list-group-item">{{ h.habilidad }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                <div class="col"></div>
+            </div>
+        </div>
+    </div>
+</div>
+{% include "includes/footer.html" %}
+</main>
+{% endblock content %}
+
+
+
